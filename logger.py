@@ -86,6 +86,10 @@ def getVoltage(sensorpin):
   vtotal = 0
   # initial timer for interval counter
   t1 = time()
+  if t1 - t  >= 0.1:
+    t = time()
+    v = vtotal
+    maxValue = 0
   # reset the max value with interval of 1 sec
   # get analog read from mcp3008
   channel = mcp.read_adc(sensorpin)
@@ -100,7 +104,7 @@ def getVoltage(sensorpin):
   vtotal = vtotal/100
   if vtotal < 10 :
     vtotal = 0.00
-  return (round(vtotal,2))
+  return (round(v,2))
 
 # Function to upload to ISP Dashboard
 def upload(url, file):
@@ -142,10 +146,10 @@ def main():
       if timer - sensorTimer >= 1:
         currentWrite(filename_now, ac_voltage, temperature, humidity)
         print("AC Voltage: {}, Temperature: {}, Humidity: {}". format(ac_voltage,temperature,humidity))
-        try:
-          files = {'file': open(filename, 'rb')}
-        except:
-          pass
+        # try:
+        #   files = {'file': open(filename, 'rb')}
+        # except:
+        #   pass
         sensorTimer = time()
   # except cancelled by user
   except KeyboardInterrupt:
