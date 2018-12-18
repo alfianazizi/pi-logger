@@ -17,18 +17,19 @@ import busio
 import digitalio
 import board
 import sys
-import adafruit_mcp3xxx.mcp3008 as MCP
-from adafruit_mcp3xxx.analog_in import AnalogIn
+import Adafruit_MCP3008
 from time import sleep, strftime, time
 from csv import writer
 
 # Sensor ID
 sensor_id = 'klogger01'
 
-# Software SPI Config for MCP3008
-spi = busio.SPI(clock=board.SCK, MISO=board.MISO, MOSI=board.MOSI)
-cs = digitalio.DigitalInOut(board.D5)
-mcp = MCP.MCP3008(spi, cs)
+# Software SPI configuration for MCP3008:
+CLK  = 11
+MISO = 9
+MOSI = 10
+CS   = 8
+mcp = Adafruit_MCP3008.MCP3008(clk=CLK, cs=CS, miso=MISO, mosi=MOSI)
 
 # Header for csv file log
 header = ['Timestamp', 'AC Voltage', 'Temperature', 'Humidity']
@@ -38,7 +39,7 @@ directory = os.path.dirname(os.path.realpath(__file__)) + '/log/'
 
 # Define DHT Type and PIN for temperature and humidity sensor
 DHT_number = dht.DHT11
-DHT_input_pin = 22
+DHT_input_pin = 4
 
 # Collect the array template for writing to csv file
 def collectData(voltage, temperature, humidity):
@@ -83,28 +84,25 @@ def getVoltage(sensorpin):
   t = time()
   # initial total voltage
   vtotal = 0
-  try:
-    # initial timer for interval counter
-    t1 = time()
-    # reset the max value with interval of 1 sec
-    if t1 - t >= 1:
-      # reset the counter
-      t = time()
-      maxValue = 0
-    # get analog read from mcp3008
-    channel = AnalogIn(mcp, MCP.P0)
-    # set the max value to the biggest analog read value
-    if channel.value > maxValue:
-      maxValue = channel.value
-    # loop to get the average
-    for i in range(20):
-      # Polynomial regression
-      vrms = -0.0004 * maxValue * maxValue + 2.3738 * maxValue - 1030.6
-      vtotal += vrms
-    vtotal = vtotal/20
-    return vtotal
-  except:
-    pass
+  # initial timer for interval counter
+  t1 = time()
+  # reset the max value with interval of 1 sec
+  if t1 - t >= 1:
+    # reset the counter
+    t = time()
+    maxValue = 0
+  # get analog read from mcp3008
+  channel = mcp.read_adc(0)
+  # set the max value to the biggest analog read value
+  if channel > maxValue:
+    maxValue = channel
+  # loop to get the average
+  for i in range(20):
+    # Polynomial regression
+    vrms = -0.0004 * maxValue * maxValue + 2.3738 * maxValue - 1030.6
+    vtotal += vrms
+  vtotal = vtotal/20
+  return vtotal
 
 # Function to upload to ISP Dashboard
 def upload(url, file):
@@ -133,10 +131,6 @@ def main():
       # set the filename of the csv file per day
       filename = directory + sensor_id + '-' + date + '.csv'
       filename_now = directory + sensor_id + '-now.txt'
-      try:
-        files = {'file': open(filename, 'rb')}
-      except:
-        pass
       humidity, temperature = dht.read_retry(DHT_number, DHT_input_pin)
       # Get the voltage
       ac_voltage = getVoltage(sensorVolt)
@@ -149,6 +143,11 @@ def main():
       #write the current reading
       if timer - sensorTimer >= 5:
         currentWrite(filename_now, ac_voltage, temperature, humidity)
+        print("Temperature: {}, Humidity: {}". format(temperature,humidity))
+        try:
+          files = {'file': open(filename, 'rb')}
+        except:
+          pass
         sensorTimer = time()
   # except cancelled by user
   except KeyboardInterrupt:
