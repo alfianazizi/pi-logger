@@ -87,12 +87,8 @@ def getVoltage(sensorpin):
   # initial timer for interval counter
   t1 = time()
   # reset the max value with interval of 1 sec
-  if t1 - t >= 0.1:
-    # reset the counter
-    t = time()
-    maxValue = 0
   # get analog read from mcp3008
-  channel = mcp.read_adc(0)
+  channel = mcp.read_adc(sensorpin)
   # set the max value to the biggest analog read value
   if channel > maxValue:
     maxValue = channel
@@ -103,8 +99,8 @@ def getVoltage(sensorpin):
     vtotal += vrms
   vtotal = vtotal/100
   if vtotal < 10 :
-    vtotal = 0
-  return vtotal
+    vtotal = 0.00
+  return (round(vtotal,2))
 
 # Function to upload to ISP Dashboard
 def upload(url, file):
@@ -135,17 +131,17 @@ def main():
       filename_now = directory + sensor_id + '-now.txt'
       humidity, temperature = dht.read_retry(DHT_number, DHT_input_pin)
       # Get the voltage
-      #ac_voltage = getVoltage(sensorVolt)
+      ac_voltage = getVoltage(0)
       # write the sensor
-      if timer - currentTimer >= interval:
-        #data = collectData(ac_voltage, temperature, humidity)
-        #writeData(data)
+      if timer - currentTimer >= 10:
+        data = collectData(ac_voltage, temperature, humidity)
+        writeData(filename, data)
         #upload(url, files)
         currentTimer = time()
       #write the current reading
-      if timer - sensorTimer >= 5:
+      if timer - sensorTimer >= 1:
         currentWrite(filename_now, ac_voltage, temperature, humidity)
-        print("Temperature: {}, Humidity: {}". format(temperature,humidity))
+        print("AC Voltage: {}, Temperature: {}, Humidity: {}". format(ac_voltage,temperature,humidity))
         try:
           files = {'file': open(filename, 'rb')}
         except:
