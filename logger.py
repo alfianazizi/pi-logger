@@ -38,7 +38,7 @@ directory = os.path.dirname(os.path.realpath(__file__)) + '/log/'
 
 # Define DHT Type and PIN for temperature and humidity sensor
 DHT_number = dht.DHT11
-DHT_input_pin = 22
+DHT_input_pin = 4
 
 # Collect the array template for writing to csv file
 def collectData(voltage, temperature, humidity):
@@ -139,16 +139,17 @@ def main():
         pass
       humidity, temperature = dht.read_retry(DHT_number, DHT_input_pin)
       # Get the voltage
-      ac_voltage = getVoltage(sensorVolt)
+      #ac_voltage = getVoltage(sensorVolt)
       # write the sensor
       if timer - currentTimer >= interval:
-        data = collectData(ac_voltage, temperature, humidity)
-        writeData(data)
-        upload(url, files)
+        #data = collectData(ac_voltage, temperature, humidity)
+        #writeData(data)
+        #upload(url, files)
         currentTimer = time()
       #write the current reading
       if timer - sensorTimer >= 5:
-        currentWrite(filename_now, ac_voltage, temperature, humidity)
+        #currentWrite(filename_now, ac_voltage, temperature, humidity)
+        print("Temperature: {}, Humidity: {}". format(temperature,humidity))
         sensorTimer = time()
   # except cancelled by user
   except KeyboardInterrupt:
