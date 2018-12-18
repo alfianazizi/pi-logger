@@ -88,7 +88,7 @@ def getVoltage(sensorpin):
   t1 = time()
   if t1 - t  >= 0.1:
     t = time()
-    v = vtotal
+    vpp = vtotal
     maxValue = 0
   # reset the max value with interval of 1 sec
   # get analog read from mcp3008
@@ -104,7 +104,7 @@ def getVoltage(sensorpin):
   vtotal = vtotal/100
   if vtotal < 10 :
     vtotal = 0.00
-  return (round(v,2))
+  return (round(vpp,2))
 
 # Function to upload to ISP Dashboard
 def upload(url, file):
