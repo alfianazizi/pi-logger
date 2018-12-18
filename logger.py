@@ -87,7 +87,7 @@ def getVoltage(sensorpin):
   # initial timer for interval counter
   t1 = time()
   # reset the max value with interval of 1 sec
-  if t1 - t >= 1:
+  if t1 - t >= 0.1:
     # reset the counter
     t = time()
     maxValue = 0
@@ -97,11 +97,13 @@ def getVoltage(sensorpin):
   if channel > maxValue:
     maxValue = channel
   # loop to get the average
-  for i in range(20):
+  for i in range(100):
     # Polynomial regression
-    vrms = -0.0004 * maxValue * maxValue + 2.3738 * maxValue - 1030.6
+    vrms = -0.0008 * maxValue * maxValue + 2.8891 * maxValue - 1233.5
     vtotal += vrms
-  vtotal = vtotal/20
+  vtotal = vtotal/100
+  if vtotal < 10 :
+    vtotal = 0
   return vtotal
 
 # Function to upload to ISP Dashboard
