@@ -5,15 +5,16 @@ import busio
 import digitalio
 import board
 import sys
-import adafruit_mcp3xxx.mcp3008 as MCP
-from adafruit_mcp3xxx.analog_in import AnalogIn
+import Adafruit_MCP3008
 from time import sleep, strftime, time
 
-spi = busio.SPI(clock=board.SCK, MISO=board.MISO, MOSI=board.MOSI)
-cs = digitalio.DigitalInOut(board.D5)
-mcp = MCP.MCP3008(spi, cs)
+# Software SPI configuration for MCP3008:
+CLK  = 11
+MISO = 9
+MOSI = 10
+CS   = 8
+mcp = Adafruit_MCP3008.MCP3008(clk=CLK, cs=CS, miso=MISO, mosi=MOSI)
 
-channel = AnalogIn(mcp, MCP.P0)
 t = time()
 try:
   while True:
@@ -34,10 +35,10 @@ try:
         print(maxValue)
         maxValue = 0
       # get analog read from mcp3008
-      channel = AnalogIn(mcp, MCP.P0)
+      channel = mcp.read_adc(0)
       # set the max value to the biggest analog read value
-      if channel.value > maxValue:
-        maxValue = channel.value
+      if channel > maxValue:
+        maxValue = channel
       # loop to get the average
       # for i in range(20):
       #   # Polynomial regression
