@@ -113,7 +113,10 @@ def main():
       date = strftime("%Y-%m-%d")
       # set the filename of the csv file per day
       filename = directory + sensor_id + '-' + date + '.csv'
+      filename_current = directory + '-now.txt'
       humidity, temperature = dht.read_retry(DHT_number, DHT_input_pin)
+      temperature = round(temperature,1)
+      humidity = round(humidity,1)
       #temperature = random.randint(20,30)
       #humidity = random.randint(60,70)
       #vtotal = random.randint(200,230)
@@ -128,10 +131,9 @@ def main():
       if vtotal < 100.00:
          vtotal = 0.00
       vtotal = round(vtotal,2)
-      data = collectData(vtotal, temperature, humidity)
-      if timer - t >= 60:
-        writeData(filename, data)
-        #upload(url, filename)
+      #data = collectData(vtotal, temperature, humidity)
+      if timer - t >= 5:
+        currentWrite(filename_current, vtotal, temperature, humidity)
         print("AC Voltage: {}, Temperature: {}, Humidity: {}". format(vtotal,temperature,humidity))
         t = time()
   # except cancelled by user
