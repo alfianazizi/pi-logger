@@ -1,0 +1,574 @@
+Starting Program
+----------------
+--Logging Data--
+----------------
+Program Stopped by user
+Starting Program
+----------------
+--Logging Data--
+----------------
+{
+  "ok": true
+}
+
+AC Voltage: 209.61, Temperature: 30.0, Humidity: 65.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.47, Temperature: 31.0, Humidity: 62.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.37, Temperature: 16.0, Humidity: 158.0
+{
+  "ok": true
+}
+
+AC Voltage: 206.4, Temperature: 32.0, Humidity: 59.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.75, Temperature: 33.0, Humidity: 59.0
+{
+  "ok": true
+}
+
+AC Voltage: 202.44, Temperature: 33.0, Humidity: 58.0
+{
+  "ok": true
+}
+
+AC Voltage: 204.62, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 204.28, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 205.86, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 203.22, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 205.25, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.05, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.07, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 205.4, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.6, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.69, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.04, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.81, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 210.94, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 206.79, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 202.94, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 205.42, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.69, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 206.98, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.21, Temperature: 33.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 206.82, Temperature: 33.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.39, Temperature: 33.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.13, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.52, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 206.03, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.33, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.48, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 210.02, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.03, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 205.48, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.31, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.87, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.52, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 210.68, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.06, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.58, Temperature: 33.0, Humidity: 57.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.12, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.67, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.43, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 210.51, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.17, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 212.03, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.22, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 212.93, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 211.83, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.22, Temperature: 33.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.13, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 213.1, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 213.37, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.48, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.35, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 212.29, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.46, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.69, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 213.78, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 213.6, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.91, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.64, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.33, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 213.97, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.26, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 216.24, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.13, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.17, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 212.41, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 217.55, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 213.86, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 218.09, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.9, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.48, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.67, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 217.52, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 212.25, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 217.24, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.83, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.9, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 213.42, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.18, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 210.08, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.76, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.05, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.85, Temperature: 32.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 210.74, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 204.65, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.61, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.66, Temperature: 32.0, Humidity: 55.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.2, Temperature: 31.0, Humidity: 56.0
+{
+  "ok": true
+}
+
+AC Voltage: 214.55, Temperature: 29.0, Humidity: 58.0
+{
+  "ok": true
+}
+
+AC Voltage: 215.01, Temperature: 29.0, Humidity: 59.0
+{
+  "ok": true
+}
+
+AC Voltage: 213.56, Temperature: 29.0, Humidity: 60.0
+{
+  "ok": true
+}
+
+AC Voltage: 210.68, Temperature: 29.0, Humidity: 60.0
+{
+  "ok": true
+}
+
+AC Voltage: 210.33, Temperature: 29.0, Humidity: 61.0
+{
+  "ok": true
+}
+
+AC Voltage: 211.24, Temperature: 29.0, Humidity: 61.0
+{
+  "ok": true
+}
+
+AC Voltage: 211.08, Temperature: 29.0, Humidity: 62.0
+{
+  "ok": true
+}
+
+AC Voltage: 205.15, Temperature: 29.0, Humidity: 62.0
+{
+  "ok": true
+}
+
+AC Voltage: 207.86, Temperature: 28.0, Humidity: 61.0
+{
+  "ok": true
+}
+
+AC Voltage: 208.05, Temperature: 28.0, Humidity: 61.0
+{
+  "ok": true
+}
+
+AC Voltage: 204.96, Temperature: 28.0, Humidity: 62.0
+{
+  "ok": true
+}
+
+AC Voltage: 209.75, Temperature: 28.0, Humidity: 62.0
+{
+  "ok": true
+}
+
+AC Voltage: 203.81, Temperature: 28.0, Humidity: 62.0
+{
+  "ok": true
+}
+
+AC Voltage: 200.14, Temperature: 28.0, Humidity: 62.0
+{
+  "ok": true
+}
+
+AC Voltage: 200.76, Temperature: 28.0, Humidity: 62.0
+{
+  "ok": true
+}
+
+AC Voltage: 199.21, Temperature: 28.0, Humidity: 62.0
+{
+  "ok": true
+}
+
+AC Voltage: 201.41, Temperature: 28.0, Humidity: 63.0
+{
+  "ok": true
+}
+
+AC Voltage: 201.91, Temperature: 28.0, Humidity: 63.0
+{
+  "ok": true
+}
+
+AC Voltage: 203.59, Temperature: 28.0, Humidity: 63.0
+{
+  "ok": true
+}
+
+AC Voltage: 204.86, Temperature: 28.0, Humidity: 63.0
+{
+  "ok": true
+}
+
+AC Voltage: 202.34, Temperature: 28.0, Humidity: 63.0
